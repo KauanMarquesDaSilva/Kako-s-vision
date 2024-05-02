@@ -1,0 +1,67 @@
+body {
+
+/* Fundo Site */
+
+width: auto;
+height: 4500px;
+
+background: linear-gradient(180deg, #02142C 1%, #074292 3%, #02142C 15%, #02142C 70%, #074292 100%);
+
+}
+
+.Fundo {
+
+    /* Fundo Quadrado */
+
+display: block;
+margin: auto;
+
+width: 500px;
+height: 500px;
+margin-top: 70px;
+
+background: linear-gradient(0deg, #074292 0%, #02142C 15%, #02142C 70%, #074292 100%);
+border: 1px solid #FFFFFF;
+
+
+}
+
+.NavBar {
+    
+    /* Luz Superior */
+
+background-size: auto;
+width: auto;
+height: 100px;
+
+background: linear-gradient(180deg, #02142C 42.22%, #074292 100%);
+
+}
+
+.Fundo {
+
+    /* Fundo Quadrado */
+
+display: block;
+margin: auto;
+
+width: 500px;
+height: 500px;
+margin-top: 70px;
+
+background: linear-gradient(0deg, #074292 0%, #02142C 15%, #02142C 70%, #074292 100%);
+border: 1px solid #FFFFFF;
+
+
+}
+
+.texto {
+
+    display: flex;
+    color: #e2e2e2;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0);
+    font-size: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    
+    }

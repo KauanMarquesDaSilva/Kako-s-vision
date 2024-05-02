@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="StyleCadastro.css">
+</head>
+<body>
+
+    <center>
+    <div class="Fundo">
+        
+        <span class="texto">Qual Seu Nome?</span>
+        <input id="nome_usuario" class="input" placeholder="Nome" type="text">
+
+        <p></p>
+
+        <span class="texto">Qual Seu Email?</span>
+        <input id="email_usuario" class="input" placeholder="XXXX@gmail.com" type="text">
+
+        <p></p>
+
+        <span class="texto">Qual Sua Cor Favorita?</span>
+        <input id="cor_favorita_usuario" class="input" placeholder="Cor" type="text">
+
+        <p></p>
+
+        <span class="texto">Crie Uma Senha</span>
+        <input id="senha_usuario" class="input" placeholder="Senha" type="password">
+
+        <p></p>
+
+        <button class="botoes" onclick="Cadastro()">Cadastrar</button>
+
+        <p></p>
+
+        <button class="botoes" onclick="JáCadastrei()">Já Sou Cadastrado</button>
+    </div>
+</center>
+    
+</body>
+</html>
+
+<script>
+
+    function Cadastro (){
+
+        const NomeUsuario = nome_usuario.value
+        const Email = email_usuario.value
+        const CorFavorita = cor_favorita_usuario.value
+        const SenhaUsuario = senha_usuario.value
+
+        if (NomeUsuario == '' || Email == '' || CorFavorita == '' || SenhaUsuario == ''){
+            alert `Preencha Todos Os Campos Por Favor`
+        
+        }else if (SenhaUsuario.length < 12){
+            alert `Sua senha precisa ter no mínimo 12 caracteres`
+        }else {window.location.href = 'Login.html'}
+        
+    }
+
+    function JáCadastrei (){
+        window.location.href = 'Login.html'
+    }
+
+</script>
