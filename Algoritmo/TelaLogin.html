@@ -3,25 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TelaPrincipal</title>
-    <link rel="stylesheet" href="StyleTelaPrincipal.css">
+    <title>TelaLogin</title>
+    <link rel="stylesheet" href="StyleLogin.css">
 </head>
 <body>
 
     <header id="header">
-        <div id="container">
-    
-            <div class="flex">
+        
+        <div class="box-login">
 
-        <nav>
-            <ul>
-                <li><a href="TelaPrincipal.html">Home</a></li>
-                <li><a href="Personagens.html">Personagens</a></li>
-                <li><a href="Quiz.html">Quiz</a></li>
-                <li><a href="Contribuir.html">Contribuir</a></li>
-            </ul>
-        </nav>
+            <div class="box-img">
 
+                <div class="boneco">
+
+                    <div class="texto-login">
+                        <center>
+                        <h1>Login</h1>
+                        </center>
+                    </div>
+
+                </div>
+
+                <form>
+                    <label>Usuário</label>
+                    <input id="nome_usuario" type="text">
+
+                    <label>Email</label>
+                    <input id="email_usuario" type="text">
+
+                    <label>Senha</label>
+                    <input id="senha_usuario" type="password">
+
+                    <button type="button" onclick="Login()">Login</button>
+                </form>
             </div>
 
         </div>
@@ -52,12 +66,11 @@
         let NomeUsuario = nome_usuario.value
         let Email = email_usuario.value
         let Senha = senha_usuario.value
-        let CorFavorita = cor_favorita_usuario.value
 
-        if (NomeUsuario == '' || Email == '' || CorFavorita == '' || SenhaUsuario == ''){
+        if (NomeUsuario == '' || Email == '' || Senha == ''){
             alert `Preencha Todos Os Campos Por Favor`
         
-        }else if (SenhaUsuario.length < 12){
+        }else if (Senha.length < 12){
             alert `Sua senha precisa ter no mínimo 12 caracteres`
         }else {window.location.href = 'TelaPrincipal.html'}
     }

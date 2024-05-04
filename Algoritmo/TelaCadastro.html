@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TelaCadastro</title>
+    <link rel="stylesheet" href="StyleCadastro.css">
+</head>
+<body>
+
+    <header id="header">
+        <div id="container">
+    
+            <div class="flex">
+        
+        <div class="box-login">
+
+            <div class="box-img">
+
+                    <div class="texto-login">
+                        <center>
+                        <h1>Bem-Vindo</h1>
+                        <h3>Insira seus dados para cadastro</h3>
+                        </center>
+                    </div>
+
+                <form>
+                    <label>Usuário</label>
+                    <input id="nome_usuario" type="text">
+
+                    <label>Email</label>
+                    <input id="email_usuario" type="text">
+
+                    <label>Senha</label>
+                    <input id="senha_usuario" type="password">
+
+                    <label>Cor Favorita</label>
+                    <input id="cor_favorita_usuario" type="text">
+
+                    <button type="button" onclick="Login()">Login</button>
+                </form>
+            </div>
+
+        </div>
+
+    </header>
+
+    <section id="slider" class="banner">
+        
+        <img class="selected" src="C:\Users\SAMSUNG\OneDrive\Documentos\SpTech\Kako-s-vision\Imagens Site\Fundos\Roxo.png">
+        <img src="C:\Users\SAMSUNG\OneDrive\Documentos\SpTech\Kako-s-vision\Imagens Site\Fundos\Preto e Branco.png">
+
+    </section>
+
+    <script src="menu.js"></script>
+
+
+    <script src="Script.js"></script>
+
+</body>
+</html>
+
+<script>
+
+    function Login(){
+        
+        let NomeUsuario = nome_usuario.value
+        let Email = email_usuario.value
+        let Senha = senha_usuario.value
+        let CorFavorita = cor_favorita_usuario.value
+
+        if (NomeUsuario == '' || Email == ''|| CorFavorita == '' || Senha == ''){
+            alert `Preencha Todos Os Campos Por Favor`
+        
+        }else if (Senha.length < 12){
+            alert `Sua senha precisa ter no mínimo 12 caracteres`
+        }else {window.location.href = 'TelaLogin.html'}
+    }
+
+</script>
