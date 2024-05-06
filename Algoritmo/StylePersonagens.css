@@ -103,7 +103,7 @@ ul li a {
 }
 
 ul:hover li a{
-    opacity: 0.3;
+    opacity: 0.8;
 
 } 
 
@@ -132,88 +132,192 @@ ul li a:hover::before{
     transition: transform .2s;
 }
 
-.box-login {
-    width: 400px;
-    height: 450px;
-    background-color: rgba(137, 43, 226, 0.3);
-    position: absolute;
-    top: 850%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    border-radius: 20px;
 
-}
 
-.box-login label{
-    display: block;
-    color: black;
-    margin-top: 20px;
-    font-size: 25px;
-}
 
-.box-login input[type='text'], input[type='password'] {
-    width: 100%;
-    line-height: 35px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 5px;
-}
-
-.box-login button{
-    display: block;
-    width: 100%;
-    padding: 10px 20px;
-    font-size: 20px;
+.slides1 {
+    gap: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: blue;
-    color: aliceblue;
-    margin-top: 35px;
-    cursor: pointer;
+    width: 200px;
+    height: 300px;
+    padding: 32px;
+    border-radius: 32px;
 }
 
-.texto-login {
-    font-size: 25px;
+.slides2 {
+    gap: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(217, 217, 223);
+    width: 200px;
+    height: 300px;
+    padding: 32px;
+    border-radius: 32px;
 }
 
-.box-login {
-    width: 400px;
-    height: 450px;
-    background-color: rgba(137, 43, 226, 0.3);
-    position: absolute;
-    top: 500%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    border-radius: 20px;
-
+.slides3 {
+    gap: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 0, 0);
+    width: 200px;
+    height: 300px;
+    padding: 32px;
+    border-radius: 32px;
 }
 
-.box-login label{
-    display: block;
+.slides4 {
+    gap: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(13, 244, 13);
+    width: 200px;
+    height: 300px;
+    padding: 32px;
+    border-radius: 32px;
+}
+
+.slides5 {
+    gap: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(162, 162, 255);
+    width: 200px;
+    height: 300px;
+    padding: 32px;
+    border-radius: 32px;
+}
+
+.slides6 {
+    gap: 8px;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-text-stroke: .5px;
+    -webkit-text-stroke-color: #ffffff;
+    color: #000000;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+    width: 200px;
+    height: 300px;
+    padding: 32px;
+    border-radius: 32px;
+}
+
+.container2{
+    float: right;     
+    width: 60%;  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 110px;
+}
+
+.prev {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
     color: black;
-    margin-top: 20px;
-    font-size: 25px;
+    text-decoration: none;
 }
 
-.box-login input[type='text'], input[type='password'] {
-    width: 100%;
-    line-height: 35px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 5px;
+.prev-text {
+    margin-top: 2px;
 }
 
-.box-login button{
-    display: block;
+.title {
+    font-size: 28px;
     width: 100%;
-    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.content {
+    width: 200px;
+    text-align: center;
+}
+
+.container2 a{
+    color: #000000;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
     font-size: 20px;
-    background-color: blue;
-    color: aliceblue;
-    margin-top: 35px;
-    cursor: pointer;
 }
 
-.texto-login {
-    font-size: 25px;
+.Oliver {
+    color: #000000;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+    -webkit-text-stroke: .5px;
+    -webkit-text-stroke-color: #ffffff;
+    color: #000000;
+    font-size: 20px;
+}
+
+img {
+    width: auto;
+    height: 160px;
+}
+
+.footer {
+    float: right;     
+    width: 60%;  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.button {
+    background-color: brown;
+    color: antiquewhite;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 999px;
+    position: fixed;
+    left: 665px;
+}
+
+.dot-box {
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+    left: 65px;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 2px;
+    background-color: chartreuse;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color .6s ease;
+}
+
+.active, .dot :hover {
+    background-color: red;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
 }

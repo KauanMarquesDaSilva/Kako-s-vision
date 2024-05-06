@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TelaPrincipal</title>
+    <title>Personagens</title>
     <link rel="stylesheet" href="StylePersonagens.css">
 </head>
 <body>
@@ -22,42 +22,82 @@
                     <li><a href="Contribuir.html">Contribuir</a></li>
                 </ul>
             </nav>
-    
-            </div>
+        </div>
 
-            <div class="box-login">
 
-                <div class="box-img">
     
-                    <div class="boneco">
-    
-                        <div class="texto-login">
-                            <center>
-                            <h1>Login</h1>
-                            </center>
-                        </div>
-    
-                    </div>
-    
-                    <form>
-                        <label>Usuário</label>
-                        <input id="nome_usuario" type="text">
-    
-                        <label>Email</label>
-                        <input id="email_usuario" type="text">
-    
-                        <label>Senha</label>
-                        <input id="senha_usuario" type="password">
-    
-                        <button type="button" onclick="Login()">Login</button>
-                    </form>
+        <div class="container2">
+
+            <div>
+                <div class="slides slides1 fades">
+                    <img src="C:\Users\SAMSUNG\OneDrive\Documentos\SpTech\Kako-s-vision\Imagens Site\Luau\Padrão.png">
+                    <h2 class="title">Luau</h2>
+                    <p class="content"><a href="Luau.html">Descrição</a></p>
                 </div>
-
             </div>
+
+            <div>
+                <div class="slides slides2 fades">
+                    <img src="C:\Users\SAMSUNG\OneDrive\Documentos\SpTech\Kako-s-vision\Imagens Site\Fieal\Padrão.png">
+                    <h2 class="title">Fieal</h2>
+                    
+                    <p class="content"><a href="Quiz.html">Descrição</a></p>
+                </div>
+            </div>
+
+            <div>
+                <div class="slides slides3 fades">
+                    <img src="C:\Users\SAMSUNG\OneDrive\Documentos\SpTech\Kako-s-vision\Imagens Site\Vinicius\Padrão.png">
+                    <h2 class="title">Vinicius</h2>
+                    <p class="content"><a href="Quiz.html">Descrição</a></p>
+                </div>
+            </div>
+
+            <div>
+                <div class="slides slides4 fades">
+                    <img src="C:\Users\SAMSUNG\OneDrive\Documentos\SpTech\Kako-s-vision\Imagens Site\Deivi\Padrão.png">
+                    <h2 class="title">Deivi</h2>
+                    <p class="content"><a href="Quiz.html">Descrição</a></p>
+                </div>
+            </div>
+
+            <div>
+                <div class="slides slides5 fades">
+                    <img src="C:\Users\SAMSUNG\OneDrive\Documentos\SpTech\Kako-s-vision\Imagens Site\Sajad\Padrão.png">
+                    <h2 class="title">Sajad</h2>
+                    <p class="content"><a href="Quiz.html">Descrição</a></p>
+                </div>
+            </div>
+
+            <div>
+                <div class="slides slides6 fades">
+                    <img src="C:\Users\SAMSUNG\OneDrive\Documentos\SpTech\Kako-s-vision\Imagens Site\Oliver\Padrão.png">
+                    <h2 class="title">Oliver</h2>
+                    <p class="content"><a class="Oliver" href="Quiz.html">Descrição</a></p>
+                </div>
+            </div>
+
 
         </div>
 
+
+
+        <div class="footer">
+            
+        <button class="button" onclick="addSlides(1)">Próximo</button>
+            
+            <div class="dot-box">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+
     </header>
+    
 
     <section id="slider" class="banner">
         
@@ -65,32 +105,13 @@
         <img src="C:\Users\SAMSUNG\OneDrive\Documentos\SpTech\Kako-s-vision\Imagens Site\Fundos\Preto e Branco.png">
 
     </section>
-    
-    </script>
+
+
+    <script src="Personagens.js"></script>
 
     <script src="menu.js"></script>
-
 
     <script src="Script.js"></script>
 
 </body>
 </html>
-
-<script>
-
-    function Login(){
-        
-        let NomeUsuario = nome_usuario.value
-        let Email = email_usuario.value
-        let Senha = senha_usuario.value
-        let CorFavorita = cor_favorita_usuario.value
-
-        if (NomeUsuario == '' || Email == '' || CorFavorita == '' || SenhaUsuario == ''){
-            alert `Preencha Todos Os Campos Por Favor`
-        
-        }else if (SenhaUsuario.length < 12){
-            alert `Sua senha precisa ter no mínimo 12 caracteres`
-        }else {window.location.href = 'TelaPrincipal.html'}
-    }
-
-</script>
