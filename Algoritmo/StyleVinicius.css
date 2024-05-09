@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    padding: 20px 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: .5s;
+
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header.rolagem {
+    background-color: blueviolet;
+    padding: 10px 1%;
+    opacity: 70%;
+}
+
+.fundo {
+    height: 100%;
+    background-image: ("slider");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner {
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+#slider {
+    width: 100%;
+    height: 100%;
+    background-image: ('slider');
+
+    min-height: 100%;
+
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+
+}
+
+#slider img{
+    opacity: 0;
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: opacity 5000ms;
+}
+
+#slider img.selected{
+    opacity: 1;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+ul li{
+    margin: 0 40px;
+}
+
+ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 22px;
+    transition: 0.3s;
+    display: block;
+    position: relative;
+    padding: 5px;
+    opacity: 100px;
+}
+
+ul:hover li a{
+    opacity: 0.8;
+
+} 
+
+ul li a:hover{
+    opacity: 1;
+    transform: scale(1.2);
+} 
+
+ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    z-index: -1;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: .2s;
+}
+
+ul li a:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform .2s;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slides1 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(255,0,0);
+background: linear-gradient(180deg, rgba(255,0,0,0.7) 0%, rgba(255,116,0,0.7) 50%, rgba(255,227,0,0.7) 100%);
+    width: 800px;
+    height: 500px;
+    padding: 32px;
+    border-radius: 32px;
+    margin-top: 50px;
+}
+
+
+.slides1 img {
+    margin-left: 28px;
+}
+
+.slides1 .img0 {
+    width: 110px;
+    height: 160px;
+
+}
+
+.slides1 .img1 {
+    width: 130px;
+    height: 160px;
+
+}
+
+.slides1 .img2 {
+    width: 110px;
+    height: 165px;
+}
+
+.slides1 .img3 {
+    width: 170px;
+    height: 170px;
+}
+
+.slides1 .img4 {
+    width: 120px;
+    height: 160px;
+}
+
+p {
+    margin-top: 7px;
+}
+
+span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
