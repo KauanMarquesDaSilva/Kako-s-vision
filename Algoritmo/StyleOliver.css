@@ -4,6 +4,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 .container {
     max-width: 1280px;
     margin: auto;
@@ -103,7 +104,7 @@ ul li a {
 }
 
 ul:hover li a{
-    opacity: 0.3;
+    opacity: 0.8;
 
 } 
 
@@ -132,55 +133,83 @@ ul li a:hover::before{
     transition: transform .2s;
 }
 
-input {
-    border-radius: 5px;
-    width: 30%;
-    max-width: 500px;
-    height: auto;
-    
-}
-
-main {
+.container2 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container1 {
-    display: flex;
-    flex-direction: column;
+.slides1 {
     justify-content: center;
     align-items: center;
-
-    top: 50%;
-    left: 80%;
-
-    background-color: #ffffff;
-    width: 100%;
-    max-width: 800px;
-
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 6px;
-    padding: 16px;
-
-    margin-top: 10%;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-button{
-    width: 200px;
-    height: 25px;
-    margin: 10px;
-    border-radius: 6px;
-    font-size: 15px;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0) 10%, rgba(255,116,0) 50%, rgba(0,0,0) 95%, rgba(255,255,255) 100%);
+    width: 850px;
+    height: 520px;
+    padding: 32px;
+    border-radius: 32px;
+    margin-top: 40px;
 }
+
+
+.slides1 img {
+    margin-left: 38px;
+}
+
+.slides1 .img0 {
+    width: 115px;
+    height: auto;
+
+}
+
+.slides1 .img1 {
+    width: 120px;
+    height: auto;
+
+}
+
+.slides1 .img2 {
+    width: 115px;
+    height: auto;
+}
+
+.slides1 .img3 {
+    width: 180px;
+    height: auto;
+}
+
+.slides1 .img4 {
+    width: 110px;
+    height: auto;
+}
+
+p {
+    margin-top: 7px;
+}
+
+span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+
+}
+
+h1{
+    color: #000000;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+    -webkit-text-stroke: .5px;
+    -webkit-text-stroke-color: #ffffff;
+    color: #000000;
+}
+
+
+
+
+
+
+
 
 
 

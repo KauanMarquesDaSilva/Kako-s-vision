@@ -1,41 +1,91 @@
 const questions = [
 
-    { question: "No seu primeiro ano em Hogwarts, que tipo de aluno você seria?", options: ["Não se juntaria a ninguém, pois não precisa de ninguém", "Se juntaria as pessoas que parecem ser mais inteligentes", "Aquele que se juntaria às primeiras pessoas que
- te acolhessem", "Aquele que se juntaria as pessoas mais populares"], points: [2, 1, 3, 4] },
+    { question: "No Seu Tempo Livre, O Que Você Faria?",
+    options: ["Encontraria os amigos",
+    "Ficaria em casa lendo",
+    "Comer", 
+    "Deitaria num jardir só meu",
+    "Sairia pra correr um pouco",
+    "Ficaria com a Família"], 
+    points: [1, 2, 3, 4, 5, 6] },
 
-    { question: "Qual qualidade é mais importante para você?", options: ["Coragem", "Inteligência", "Ambição", "Lealdade"], points: [1, 2, 3, 4] },
 
-    { question: "Qual animal você prefere?", options: ["Leão", "Águia", "Cobra", "Texugo"], points: [1, 2, 3, 4] },
 
-    { question: "Qual é seu hobby preferido?", options: ["Jogar quadribol", "Estudar na biblioteca", "Planejar estratégias", "Cuidar de plantas"], points: [1, 2, 3, 4] },
+    { question: "O Que Você Não Suporta?",
+    options: ["Injustiça",
+    "Gente Burra",
+    "Pessoas",
+    "Nada, Sou Tranquilo",
+    "Ser superado naquilo que sou bom",
+    "Que Provoque Quem Amo"],
+    points: [1, 2, 3, 4, 5, 6] },
 
-    { question: "Se pudesse escolher uma criatura mágica para ser seu amigo, qual seria?", options: ["Fênix", "Sereiano", "Dragão", "Hipogrifo"], points: [1, 2, 3, 4] },
 
-    { question: "O que você mais valoriza em uma competição?", options: ["Espírito esportivo", "Estratégia", "Vitória a qualquer custo", "Trabalho em equipe"], points: [1, 2, 3, 4] },
 
-    { question: "Qual destas características você mais valoriza em uma pessoa?", options: ["Coragem", "Criatividade", "Ambição", "Compaixão"], points: [1, 2, 3, 4] },
+    { question: "Você Se Considera Uma Pessoa:",
+    options: ["Diferente",
+    "Inteligente",
+    "Impaciente",
+    "Feliz",
+    "Determinada",
+    "Forte"],
+    points: [1, 2, 3, 4, 5, 6] },
 
-    { question: "Qual seria sua matéria preferida em Hogwarts?", options: ["Defesa contra as artes das trevas", "História da magia", "Poções", "Herbologia"], points: [1, 2, 3, 4] },
 
-    { question: "Durante um torneio bruxo, qual tarefa você escolheria?", options: ["A tarefa que exige coragem e bravura", "A tarefa que exige conhecimentos e habilidades mágicas", "A tarefa que exige astúcia e estratégia", "A tarefa que envolve ajudar os
- outros, mesmo que seja dificíl"], points: [1, 2, 3, 4] },
 
-    { question: "Que tipo de fama você gostaria de ter?", options: ["Ser reconhecido como alguém valente e destemido", "Ser reconhecido como um gênio, alguém muito inteligente e perspicaz", "Ser reconhecido como alguém influente e poderoso", "Ser reconhecido
- como alguém gentil e prestativo, que sempre está lá para ajudar os outros"], points: [1, 2, 3, 4] },
+    { question: "Das Opções Abaixo, Qual Você Mais Gosta De Fazer?",
+    options: ["Treinar",
+    "Aprender Algo Novo",
+    "Ouvir Música",
+    "Conversar",
+    "Conhecer Lugares Novos",
+    "Desenhar"],
+    points: [1, 2, 3, 4, 5, 6] },
 
-    { question: "O que mais te motiva?", options: ["Aventura", "Conhecimento", "Sucesso", "Amizade"], points: [1, 2, 3, 4] }
+
+
+    { question: "Pra Você, O Que É Mais Difícil?",
+    options: ["Amar o Próximo",
+    "Reconhecer Seus Erros",
+    "Se Expressar",
+    "Saber Que Poderia Ter Feito Algo Diferente",
+    "Superar Seus Traumas",
+    "Se Conhecer"],
+    points: [1, 2, 3, 4, 5, 6] },
+
+
+
+    { question: "Qual Dessas Vista Você Prefere?",
+    options: ["Céu Estrelado",
+    "Montanhas",
+    "Pôr Do Sol",
+    "Floresta",
+    "Mar Tempestuoso",
+    "Universo"],
+    points: [1, 2, 3, 4, 5, 6] },
+
+
+
+    { question: "Se Você Pudesse Mudar Algo A Sua Vontade, O Que Seria?",
+    options: ["O Passado",
+    "O Futuro",
+    "A Si Mesmo",
+    "Nada",
+    "Os Outros",
+    "Tudo"],
+    points: [1, 2, 3, 4, 5, 6] },
 
   ];
 
   
 
-  const houses = ["Grifinória", "Corvinal", "Sonserina", "Lufa-Lufa"];
+  const Personagens = ["Luau", "Fieal", "Vinicius", "Deivi", "Sajad", "Oliver"];
 
   
 
   let currentQuestion = 0;
 
-  let answers = { "Grifinória": 0, "Corvinal": 0, "Sonserina": 0, "Lufa-Lufa": 0 };
+  let answers = { "Luau": 0, "Fieal": 0, "Vinicius": 0, "Deivi": 0, "Sajad": 0, "Oliver": 0 };
 
   
 
@@ -45,7 +95,11 @@ const questions = [
 
   const resultElement = document.getElementById("result");
 
-  const nextButton = document.getElementById("nextButton");
+  const voltarButton = document.querySelector(".voltar");
+
+  const testeElement = document.getElementById("teste");
+
+  const fundoElement = document.getElementById("fundo");
 
   
 
@@ -79,13 +133,13 @@ const questions = [
 
     const question = questions[currentQuestion];
 
-    const houseIndex = question.options.indexOf(option);
+    const PersonagensIndex = question.options.indexOf(option);
 
-    const house = houses[houseIndex];
+    const Personagem = Personagens[PersonagensIndex];
 
     
 
-    answers[house] += points;
+    answers[Personagem] += 1;
 
     currentQuestion++;
 
@@ -100,43 +154,69 @@ const questions = [
     }
 
   }
-
-  
-
   
 
   function showResult() {
 
     let maxPoints = -1;
 
-    let winningHouse = "";
+    let winningPersonagem = "";
 
   
 
-    for (const house in answers) {
+    for (const Personagem in answers) {
 
-      if (answers[house] > maxPoints) {
+      if (answers[Personagem] > maxPoints) {
 
-        maxPoints = answers[house];
+        maxPoints = answers[Personagem];
 
-        winningHouse = house;
+        winningPersonagem = Personagem;
 
       }
 
     }
+    
+    const testes = document.querySelectorAll("[id^='teste']");
+    testes.forEach(teste => teste.style.display = "none");
 
-  
+    const idDoVencedor = get(winningPersonagem);
+    const elementoVencedor = document.getElementById(idDoVencedor);
+    elementoVencedor.style.display = "flex";
 
-    resultElement.textContent = `Sua casa em Hogwarts é: ${winningHouse}!`;
+    const mensagemFinal = `Quem te Representa é: ${winningPersonagem}!`;
+    resultElement.textContent = mensagemFinal;
+    fundoElement.style.display = "none";
+    questionElement.style.display = "none";
+    optionsElement.style.display = "none";
+    voltarButton.style.display = "block";
+}
 
-    nextButton.style.display = "none";
+function get(Personagem) {
+    const idPersonagem = {
+      "Luau": "teste1",
+      "Fieal": "teste2",
+      "Vinicius": "teste3",
+      "Deivi": "teste4",
+      "Sajad": "teste5",
+      "Oliver": "teste6"
+    };
 
-  }
-
-  
-
-  nextButton.addEventListener("click", showQuestion);
-
+    return idPersonagem[Personagem];
+}
   
 
   showQuestion();
+
+
+  
+  const menuButton = document.getElementById("menuButton");
+
+    menuButton.addEventListener("click", showMenu);
+
+    function showMenu() {
+        window.location.href = "Quiz.html"
+
+        const menuButton = document.getElementById("showMenu");
+        menuButton.style.display = "block";
+    }
+

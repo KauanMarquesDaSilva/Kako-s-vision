@@ -145,7 +145,7 @@ ul li a:hover::before{
     text-align: center;
     background: rgba(0, 255, 0, 0.7);
     width: 850px;
-    height: 500px;
+    height: 510px;
     padding: 32px;
     border-radius: 32px;
     margin-top: 50px;

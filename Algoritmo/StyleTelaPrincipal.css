@@ -6,7 +6,6 @@
 
 .container {
     max-width: 1280px;
-    margin: auto;
 }
 
 .flex {
@@ -126,8 +125,31 @@ ul li a::before {
     transition: .2s;
 }
 
-ul li a:hover::before{
+ul li a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
     transition: transform .2s;
+}
+
+.container1 {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(240, 248, 255, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    padding: 16px;
+
+
+}
+
+h1 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
 }

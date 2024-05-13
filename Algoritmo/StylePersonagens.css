@@ -164,7 +164,8 @@ ul li a:hover::before{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 0, 0);
+    background: rgb(255,0,0);
+    background: linear-gradient(180deg, rgba(255,0,0) 0%, rgba(255,116,0) 50%, rgba(255,227,0) 100%);
     width: 200px;
     height: 300px;
     padding: 32px;
@@ -203,11 +204,23 @@ ul li a:hover::before{
     -webkit-text-stroke-color: #ffffff;
     color: #000000;
     align-items: center;
-    background-color: rgb(26, 26, 26);
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0) 10%, rgba(255,116,0) 50%, rgba(0,0,0) 95%, rgba(255,255,255) 100%);
     width: 200px;
     height: 300px;
     padding: 32px;
     border-radius: 32px;
+}
+
+.Oliver {
+    color: #000000;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+    -webkit-text-stroke: .5px;
+    -webkit-text-stroke-color: #ffffff;
+    color: #000000;
+    font-size: 20px;
 }
 
 .container2{
@@ -249,17 +262,6 @@ ul li a:hover::before{
     text-decoration: none;
     list-style: none;
     list-style-type: none;
-    font-size: 20px;
-}
-
-.Oliver {
-    color: #000000;
-    text-decoration: none;
-    list-style: none;
-    list-style-type: none;
-    -webkit-text-stroke: .5px;
-    -webkit-text-stroke-color: #ffffff;
-    color: #000000;
     font-size: 20px;
 }
 

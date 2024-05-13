@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TelaPrincipal</title>
-    <link rel="stylesheet" href="StyleQuiz.css">
+    <title>Contribuição</title>
+    <link rel="stylesheet" href="Contribuir.css">
 </head>
 <body>
 
@@ -22,41 +22,33 @@
                     <li><a href="Contribuir.html">Contribuir</a></li>
                 </ul>
             </nav>
-    
-            </div>
-
-            <div class="box-login">
-
-                <div class="box-img">
-    
-                    <div class="boneco">
-    
-                        <div class="texto-login">
-                            <center>
-                            <h1>Login</h1>
-                            </center>
-                        </div>
-    
-                    </div>
-    
-                    <form>
-                        <label>Usuário</label>
-                        <input id="nome_usuario" type="text">
-    
-                        <label>Email</label>
-                        <input id="email_usuario" type="text">
-    
-                        <label>Senha</label>
-                        <input id="senha_usuario" type="password">
-    
-                        <button type="button" onclick="Login()">Login</button>
-                    </form>
-                </div>
-
-            </div>
 
         </div>
 
+
+        <main>
+            <div class="container1">
+
+                <h1>Insira o Hexadecimal da Cor que Deseja Contribuir</h1>
+                <br>
+                <input id="hexadecimal" placeholder="112233" type="text">
+                <br>
+                <h1>Insira o Nome que Você Quer Dar a Cor</h1>
+                <br>
+                <input id="nome_cor" placeholder="Nome da Cor" type="text">
+                <br>
+
+                <div class="button-container">
+                    <button onclick="Teste()">Teste</button>
+                    <button onclick="Contribuir()">Contribuir</button>
+                </div>
+                
+            </div>
+
+
+        </main>
+
+    
     </header>
 
     <section id="slider" class="banner">
@@ -79,19 +71,34 @@
 
 <script>
 
-    function Login(){
-        
-        let NomeUsuario = nome_usuario.value
-        let Email = email_usuario.value
-        let Senha = senha_usuario.value
-        let CorFavorita = cor_favorita_usuario.value
+    function Teste(){
 
-        if (NomeUsuario == '' || Email == '' || CorFavorita == '' || SenhaUsuario == ''){
-            alert `Preencha Todos Os Campos Por Favor`
-        
-        }else if (SenhaUsuario.length < 12){
-            alert `Sua senha precisa ter no mínimo 12 caracteres`
-        }else {window.location.href = 'TelaPrincipal.html'}
+    let Hexadecimal = hexadecimal.value;
+    let NomeCor = nome_cor.value;
+    let container1 = document.querySelector('.container1');
+
+    if(Hexadecimal.length < 3){
+        alert('Insira pelo menos 3 dígitos do código Hexadecimal');
+
+    } else {
+        container1.style.backgroundColor = '#' + Hexadecimal;
     }
+}
+
+</script>
+
+<script>
+
+    function Contribuir(){
+
+    let Hexadecimal = hexadecimal.value;
+    let NomeCor = nome_cor.value;
+
+    if(Hexadecimal == "" || NomeCor == ""){
+        alert `Preencha Todos Os Campos`
+    }else{
+        alert `Obrigado pela contribuição`
+    }
+}
 
 </script>
