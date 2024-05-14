@@ -144,12 +144,12 @@ ul li a:hover::before{
     align-items: center;
     text-align: center;
     background: rgb(255,0,0);
-background: linear-gradient(180deg, rgba(255,0,0,0.7) 0%, rgba(255,116,0,0.7) 50%, rgba(255,227,0,0.7) 100%);
+    background: linear-gradient(180deg, rgba(255,0,0,0.7) 0%, rgba(255,116,0,0.7) 50%, rgba(255,227,0,0.7) 100%);
     width: 800px;
-    height: 500px;
+    height: 490px;
     padding: 32px;
     border-radius: 32px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 
@@ -190,6 +190,60 @@ p {
 
 span {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer {
+    float: right;     
+    width: 60%;  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.button {
+    background-color: brown;
+    color: antiquewhite;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 999px;
+    position: fixed;
+    left: 665px;
+}
+
+.dot-box {
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+    left: 70px;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 2px;
+    background-color: chartreuse;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color .6s ease;
+}
+
+.active, .dot :hover {
+    background-color: red;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
 }
 
 

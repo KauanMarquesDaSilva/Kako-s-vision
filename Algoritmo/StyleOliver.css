@@ -4,7 +4,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 .container {
     max-width: 1280px;
     margin: auto;
@@ -149,7 +148,7 @@ ul li a:hover::before{
     height: 520px;
     padding: 32px;
     border-radius: 32px;
-    margin-top: 40px;
+    margin-top: 12px;
 }
 
 
@@ -204,7 +203,59 @@ h1{
     color: #000000;
 }
 
+.footer {
+    float: right;     
+    width: 60%;  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+}
 
+.button {
+    background-color: brown;
+    color: antiquewhite;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 999px;
+    position: fixed;
+    left: 675px;
+}
+
+.dot-box {
+    text-align: center;
+    position: relative;
+    margin-top: 43px;
+    left: 80px;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 2px;
+    background-color: chartreuse;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color .6s ease;
+}
+
+.active, .dot :hover {
+    background-color: red;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
+}
 
 
 
