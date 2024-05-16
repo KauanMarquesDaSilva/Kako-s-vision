@@ -4,7 +4,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 .container {
     max-width: 1280px;
     margin: auto;
@@ -104,7 +103,7 @@ ul li a {
 }
 
 ul:hover li a{
-    opacity: 0.8;
+    opacity: 0.3;
 
 } 
 
@@ -133,132 +132,60 @@ ul li a:hover::before{
     transition: transform .2s;
 }
 
-.container2 {
+input {
+    border-radius: 5px;
+    width: 30%;
+    max-width: 500px;
+    height: auto;
+    
+}
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.slides1 {
+.container1 {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: rgba(0, 255, 0, 0.7);
-    width: 850px;
-    height: 510px;
-    padding: 32px;
-    border-radius: 32px;
+
+    top: 50%;
+    left: 80%;
+
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1000px;
+
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 6px;
+    padding: 16px;
+
+    margin-top: 5%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
     margin-top: 10px;
 }
 
-
-.slides1 img {
-    margin-left: 26px;
-}
-
-.slides1 .img0 {
-    width: 110px;
-    height: 160px;
-
-}
-
-.slides1 .img1 {
-    width: 140px;
-    height: 160px;
-
-}
-
-.slides1 .img2 {
-    width: 115px;
-    height: 165px;
-}
-
-.slides1 .img3 {
-    width: 180px;
-    height: 170px;
-}
-
-.slides1 .img4 {
-    width: 115px;
-    height: 160px;
-}
-
-.imgPaleta{
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    height: auto;
-    margin-top: 10px;
-}
-
-.beleza{
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    width: 125px;
-    height: auto;
-    margin-top: 5px;
-}
-
-p {
-    margin-top: 5px;
-}
-
-span {
+button{
+    width: 200px;
+    height: 25px;
+    margin: 10px;
+    border-radius: 6px;
+    font-size: 15px;
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.footer {
-    float: right;     
-    width: 60%;  
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: 10px;
+p{
+    margin-top: 5px;
 }
 
-.button {
-    background-color: brown;
-    color: antiquewhite;
-    width: 200px;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 999px;
-    position: fixed;
-    left: 680px;
-}
 
-.dot-box {
-    text-align: center;
-    position: relative;
-    margin-top: 43px;
-    left: 65px;
-}
 
-.dot {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 0 2px;
-    background-color: chartreuse;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color .6s ease;
-}
-
-.active, .dot :hover {
-    background-color: red;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {opacity: .2}
-    to {opacity: 1}
-}

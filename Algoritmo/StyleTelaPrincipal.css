@@ -23,16 +23,6 @@ header {
     transition: .5s;
 }
 
-header ul {
-    list-style-type: none;
-}
-
-header.rolagem {
-    background-color: blueviolet;
-    padding: 10px 1%;
-    opacity: 70%;
-}
-
 .fundo {
     height: 100%;
     background-image: ("slider");

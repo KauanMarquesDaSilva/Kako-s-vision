@@ -145,7 +145,7 @@ ul li a:hover::before{
     text-align: center;
     background-color: rgba(255, 246, 246, 0.7);
     width: 800px;
-    height: 480px;
+    height: 490px;
     padding: 32px;
     border-radius: 32px;
     margin-top: 20px;
@@ -183,6 +183,23 @@ ul li a:hover::before{
     height: 160px;
 }
 
+.imgPaleta{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 490px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.beleza{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: auto;
+}
+
 p {
     margin-top: 7px;
 }
@@ -217,7 +234,7 @@ span {
     text-align: center;
     position: relative;
     margin-top: 50px;
-    left: 70px;
+    left: 110px;
 }
 
 .dot {

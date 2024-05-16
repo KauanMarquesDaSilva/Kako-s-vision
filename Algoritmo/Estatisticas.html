@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contribuição</title>
-    <link rel="stylesheet" href="Contribuir.css">
+    <title>Estatísticas</title>
+    <link rel="stylesheet" href="Estatisticas.css">
 </head>
 <body>
 
@@ -31,20 +31,8 @@
         <main>
             <div class="container1">
 
-                <h1>Insira o Hexadecimal da Cor que Deseja Contribuir</h1>
-                <br>
-                <input id="hexadecimal" placeholder="112233" type="text">
-                <br>
-                <h1>Insira o Nome que Você Quer Dar a Cor</h1>
-                <br>
-                <input id="nome_cor" placeholder="Nome da Cor" type="text">
-                <br>
 
-                <div class="button-container">
-                    <button onclick="Teste()">Teste</button>
-                    <button onclick="Contribuir()">Contribuir</button>
-                </div>
-                
+
             </div>
 
 
@@ -69,37 +57,3 @@
 
 </body>
 </html>
-
-<script>
-
-    function Teste(){
-
-    let Hexadecimal = hexadecimal.value;
-    let NomeCor = nome_cor.value;
-    let container1 = document.querySelector('.container1');
-
-    if(Hexadecimal.length < 3){
-        alert('Insira pelo menos 3 dígitos do código Hexadecimal');
-
-    } else {
-        container1.style.backgroundColor = '#' + Hexadecimal;
-    }
-}
-
-</script>
-
-<script>
-
-    function Contribuir(){
-
-    let Hexadecimal = hexadecimal.value;
-    let NomeCor = nome_cor.value;
-
-    if(Hexadecimal == "" || NomeCor == ""){
-        alert `Preencha Todos Os Campos`
-    }else{
-        alert `Obrigado pela contribuição`
-    }
-}
-
-</script>

@@ -30,7 +30,7 @@ header ul {
     list-style-type: none;
 }
 
-header.rolagem {
+header .rolagem {
     background-color: blueviolet;
     padding: 10px 1%;
     opacity: 70%;
@@ -139,13 +139,14 @@ ul li a:hover::before{
 }
 
 .slides1 {
+    display: inline;
     justify-content: center;
     align-items: center;
     text-align: center;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0) 10%, rgba(255,116,0) 50%, rgba(0,0,0) 95%, rgba(255,255,255) 100%);
     width: 850px;
-    height: 520px;
+    height: 515px;
     padding: 32px;
     border-radius: 32px;
     margin-top: 12px;
@@ -184,7 +185,7 @@ ul li a:hover::before{
 }
 
 p {
-    margin-top: 7px;
+    margin-top: 5px;
 }
 
 span {
@@ -203,13 +204,40 @@ h1{
     color: #000000;
 }
 
-.footer {
+h2{
+    color: #000000;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+    -webkit-text-stroke: .5px;
+    -webkit-text-stroke-color: #ffffff;
+    color: #000000;
+}
+
+.imgPaleta{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.beleza{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: auto;
+}
+
+.footer{
     float: right;     
     width: 60%;  
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .button {
@@ -228,8 +256,8 @@ h1{
 .dot-box {
     text-align: center;
     position: relative;
-    margin-top: 43px;
-    left: 80px;
+    margin-top: 41px;
+    left: 120px;
 }
 
 .dot {

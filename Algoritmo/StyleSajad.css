@@ -183,6 +183,23 @@ ul li a:hover::before{
     height: auto;
 }
 
+.imgPaleta{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 490px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.beleza{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: auto;
+}
+
 p {
     margin-top: 7px;
 }
@@ -210,14 +227,14 @@ span {
     cursor: pointer;
     border-radius: 999px;
     position: fixed;
-    left: 665px;
+    left: 670px;
 }
 
 .dot-box {
     text-align: center;
     position: relative;
     margin-top: 50px;
-    left: 65px;
+    left: 115px;
 }
 
 .dot {
