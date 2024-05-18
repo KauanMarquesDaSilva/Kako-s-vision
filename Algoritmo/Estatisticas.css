@@ -211,8 +211,8 @@ h3{
     align-items: center;
     background-color: rgb(255, 0, 0);
     width: 200px;
-    height: auto;
-    padding: 32px;
+    height: 340px;
+    padding: 20px;
     border-radius: 32px;
     margin-top: 10px;
 }

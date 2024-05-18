@@ -13,6 +13,7 @@ CREATE TABLE Usuario (
     Nome VARCHAR (45),
     Email VARCHAR(265),
     Senha VARCHAR (45),
+    CorFavorita VARCHAR(45),
     fkQuiz INT,
 		CONSTRAINT fkQuizUsuario FOREIGN KEY (fkQuiz)
 			REFERENCES Quiz (idQuiz));
@@ -26,5 +27,4 @@ CREATE TABLE Contribuicao (
 		CONSTRAINT fkUsuarioContribuicao FOREIGN KEY (fkUsuario)
 			REFERENCES Usuario(idUsuario));
 
-SELECT * FROM Usuario JOIN Contribuicao
-	ON idUsuario = fkUsuario;
+SELECT * FROM Usuario;
