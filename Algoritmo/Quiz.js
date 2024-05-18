@@ -1,19 +1,19 @@
 const questions = [
 
-    { question: "No Seu Tempo Livre, O Que Você Faria?",
+    { question: "No seu tempo livre, o que você faria?",
     options: ["Encontraria os amigos",
     "Ficaria em casa lendo",
     "Comer", 
     "Deitaria num jardir só meu",
-    "Sairia pra correr um pouco",
+    "Iria passear",
     "Ficaria com a Família"], 
     points: [1, 2, 3, 4, 5, 6] },
 
 
 
-    { question: "O Que Você Não Suporta?",
+    { question: "O que você não suporta?",
     options: ["Injustiça",
-    "Gente Burra",
+    "Gente Lerda",
     "Pessoas",
     "Nada, Sou Tranquilo",
     "Ser superado naquilo que sou bom",
@@ -22,7 +22,7 @@ const questions = [
 
 
 
-    { question: "Você Se Considera Uma Pessoa:",
+    { question: "Você se considera uma pessoa:",
     options: ["Diferente",
     "Inteligente",
     "Impaciente",
@@ -33,7 +33,7 @@ const questions = [
 
 
 
-    { question: "Das Opções Abaixo, Qual Você Mais Gosta De Fazer?",
+    { question: "Das opções abaixo, qual você mais gosta de fazer?",
     options: ["Treinar",
     "Aprender Algo Novo",
     "Ouvir Música",
@@ -44,7 +44,7 @@ const questions = [
 
 
 
-    { question: "Pra Você, O Que É Mais Difícil?",
+    { question: "Pra você, o que é mais difícil?",
     options: ["Amar o Próximo",
     "Reconhecer Seus Erros",
     "Se Expressar",
@@ -55,7 +55,7 @@ const questions = [
 
 
 
-    { question: "Qual Dessas Vista Você Prefere?",
+    { question: "Qual dessas vista você prefere?",
     options: ["Céu Estrelado",
     "Montanhas",
     "Pôr Do Sol",
@@ -66,7 +66,7 @@ const questions = [
 
 
 
-    { question: "Se Você Pudesse Mudar Algo A Sua Vontade, O Que Seria?",
+    { question: "Se você pudesse mudar algo a sua vontade, o que seria?",
     options: ["O Passado",
     "O Futuro",
     "A Si Mesmo",
@@ -189,6 +189,8 @@ const questions = [
     questionElement.style.display = "none";
     optionsElement.style.display = "none";
     voltarButton.style.display = "block";
+
+    localStorage.setItem('winningPersonagem', JSON.stringify(winningPersonagem));
 }
 
 function get(Personagem) {

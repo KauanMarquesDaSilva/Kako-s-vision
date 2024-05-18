@@ -29,11 +29,78 @@
 
 
         <main>
-            <div class="container1">
+            <section class="container1">
+                <h1>Estatísticas</h1>
 
+                <div class="contribuicao">
+                    <h2>Última Contribuição</h2>
+                    <ul>
+                        
+                    </ul>
+                </div>
 
+                <p></p>
 
+                <div class="ResultadoQuiz">
+                    <h2>Resultado do Quiz</h2>
+                    <div id="teste1" class="slides slides1 fades">
+                        <img style="width: 230px;" src="C:\Users\SAMSUNG\OneDrive\Documentos\SpTech\Kako-s-vision\Imagens Site\Luau\Pin Especial.png">
+                        <p></p>
+                        <h1 class="title">Luau</h1>
+                        
+                    </div>
+                </div>
+
+                <div>
+                    <div id="teste2" class="slides slides2 fades">
+                        <img style="width: 200px;" src="C:\Users\SAMSUNG\OneDrive\Documentos\SpTech\Kako-s-vision\Imagens Site\Fieal\Especial.png">
+                        <p></p>
+                        <h1 class="title">Fieal</h1>
+                        
+                        
+                    </div>
+                </div>
+
+                <div>
+                <div>
+                    <div id="teste3" class="slides slides3 fades">
+                        <img style="width: 200px;" src="C:\Users\SAMSUNG\OneDrive\Documentos\SpTech\Kako-s-vision\Imagens Site\Vinicius\Especial.png">
+                        <p></p>
+                        <h1 class="title">Vinicius</h1>
+                        
+                    </div>
+                </div>
+
+                <div>
+                    <div id="teste4" class="slides slides4 fades">
+                        <img style="width: 200px;" src="C:\Users\SAMSUNG\OneDrive\Documentos\SpTech\Kako-s-vision\Imagens Site\Deivi\Especial.png">
+                        <p></p>
+                        <h1 class="title">Deivi</h1>
+                        
+                    </div>
+                </div>
+
+                <div>
+                    <div id="teste5" class="slides slides5 fades">
+                        <img style="width: 200px;"  src="C:\Users\SAMSUNG\OneDrive\Documentos\SpTech\Kako-s-vision\Imagens Site\Sajad\Especial.png">
+                        <p></p>
+                        <h1 class="title">Sajad</h1>
+                        
+                    </div>
+                </div>
+
+                <div>
+                    <div id="teste6" class="slides slides6 fades">
+                        <img style="width: 230px;" src="C:\Users\SAMSUNG\OneDrive\Documentos\SpTech\Kako-s-vision\Imagens Site\Oliver\Especial.png">
+                        <p></p>
+                        <h1 class="title">Oliver</h1>
+                        
+                    </div>
+                </div>
             </div>
+                </div>
+
+            </section>
 
 
         </main>
@@ -55,5 +122,24 @@
 
     <script src="Script.js"></script>
 
+    <script src="Quiz.js"></script>
+
 </body>
 </html>
+
+<script>
+
+    let PersonagemVencedor = JSON.parse(localStorage.getItem('winningPersonagem'));
+    let Hexadecimal = localStorage.getItem('Hexadecimal');
+    let NomeCor = localStorage.getItem('NomeCor');
+
+    document.querySelector('.contribuicao').innerHTML += `<b>Hexadecimal: #${Hexadecimal}<p> Nome: ${NomeCor}<p></b>`;
+
+    const idDoVencedor = get(PersonagemVencedor);
+    const elementoVencedor = document.getElementById(idDoVencedor);
+    elementoVencedor.style.display = "flex";
+
+    fundoElement.style.display = "none";
+
+    localStorage.setItem('PersonagemVencedor', JSON.stringify(PersonagemVencedor));
+</script>

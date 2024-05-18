@@ -33,7 +33,7 @@
 
                 <h1>Insira o Hexadecimal da Cor que Deseja Contribuir</h1>
                 <br>
-                <input id="hexadecimal" placeholder="112233" type="text">
+                <input id="hexadecimal" placeholder="1 a 9, A a H" type="text">
                 <br>
                 <h1>Insira o Nome que Você Quer Dar a Cor</h1>
                 <br>
@@ -41,9 +41,15 @@
                 <br>
 
                 <div class="button-container">
-                    <button onclick="Teste()">Teste</button>
+                    <button onclick="Teste()">Clique para testar sua cor</button>
                     <button onclick="Contribuir()">Contribuir</button>
                 </div>
+                
+            </div>
+            <div class="mini_container">
+                <h1>Exemplo</h1><p></p>
+                <span>Hexadecimal: FFFF00</span><p></p>
+                <span>Nome: Amarelo</span>
                 
             </div>
 
@@ -78,11 +84,12 @@
     let NomeCor = nome_cor.value;
     let container1 = document.querySelector('.container1');
 
-    if(Hexadecimal.length < 3){
-        alert('Insira pelo menos 3 dígitos do código Hexadecimal');
+    if(Hexadecimal.length <= 5){
+        alert('Insira 6 dígitos ao código Hexadecimal');
 
     } else {
         container1.style.backgroundColor = '#' + Hexadecimal;
+        mini_container.style.backgroundColor = '#' + Hexadecimal;
     }
 }
 
@@ -95,10 +102,15 @@
     let Hexadecimal = hexadecimal.value;
     let NomeCor = nome_cor.value;
 
+
     if(Hexadecimal == "" || NomeCor == ""){
         alert `Preencha Todos Os Campos`
+
     }else{
         alert `Obrigado pela contribuição`
+
+        localStorage.setItem('Hexadecimal', Hexadecimal)
+        localStorage.setItem('NomeCor', NomeCor)
     }
 }
 

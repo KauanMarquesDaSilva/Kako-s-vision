@@ -151,6 +151,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     top: 50%;
     left: 80%;
@@ -163,24 +164,115 @@ main {
     border-radius: 6px;
     padding: 16px;
 
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
-.button-container {
-    display: flex;
-    justify-content: center;
+h1{
+    font-size: 40px;
+}
+
+h3{
     margin-top: 10px;
 }
 
-button{
+.slides1 {
+    gap: 8px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
     width: 200px;
-    height: 25px;
-    margin: 10px;
-    border-radius: 6px;
-    font-size: 15px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: auto;
+    padding: 32px;
+    border-radius: 32px;
+    margin-top: 10px;
 }
 
+.slides2 {
+    gap: 8px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(217, 217, 223);
+    width: 200px;
+    height: auto;
+    padding: 32px;
+    border-radius: 32px;
+    margin-top: 10px;
+}
 
+.slides3 {
+    gap: 8px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 0, 0);
+    width: 200px;
+    height: auto;
+    padding: 32px;
+    border-radius: 32px;
+    margin-top: 10px;
+}
 
+.slides4 {
+    gap: 8px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(13, 244, 13);
+    width: 200px;
+    height: auto;
+    padding: 32px;
+    border-radius: 32px;
+    margin-top: 10px;
+}
+
+.slides5 {
+    gap: 8px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(162, 162, 255);
+    width: 200px;
+    height: auto;
+    padding: 32px;
+    border-radius: 32px;
+    margin-top: 10px;
+}
+
+.slides6 {
+    gap: 8px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-text-stroke: .5px;
+    -webkit-text-stroke-color: #ffffff;
+    color: #000000;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+    width: 200px;
+    height: auto;
+    padding: 32px;
+    border-radius: 32px;
+    margin-top: 10px;
+}
+
+.Oliver {
+    color: #000000;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+    -webkit-text-stroke: .5px;
+    -webkit-text-stroke-color: #ffffff;
+    color: #000000;
+    font-size: 20px;
+}
+
+.title{
+    font-size: 40px;
+}
