@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    padding: 20px 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: .5s;
+
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header.rolagem {
+    background-color: blueviolet;
+    padding: 10px 1%;
+    opacity: 70%;
+}
+
+.fundo {
+    height: 100%;
+    background-image: ("slider");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner {
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+#slider {
+    width: 100%;
+    height: 100%;
+    background-image: ('slider');
+
+    min-height: 100%;
+
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+
+}
+
+#slider img{
+    opacity: 0;
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: opacity 5000ms;
+}
+
+#slider img.selected{
+    opacity: 1;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+ul li{
+    margin: 0 40px;
+}
+
+ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 22px;
+    transition: 0.3s;
+    display: block;
+    position: relative;
+    padding: 5px;
+    opacity: 100px;
+}
+
+ul:hover li a{
+    opacity: 0.8;
+
+} 
+
+ul li a:hover{
+    opacity: 1;
+    transform: scale(1.2);
+} 
+
+ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    z-index: -1;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: .2s;
+}
+
+ul li a:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform .2s;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slides1 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: lightblue;
+    width: 850px;
+    height: 490px;
+    padding: 32px;
+    border-radius: 32px;
+    margin-top: 20px;
+}
+
+
+.slides1 img {
+    margin-left: 26px;
+}
+
+.slides1 .img0 {
+    width: 115px;
+    height: auto;
+
+}
+
+.slides1 .img1 {
+    width: 145px;
+    height: auto;
+
+}
+
+.slides1 .img2 {
+    width: 115px;
+    height: auto;
+}
+
+.slides1 .img3 {
+    width: 160px;
+    height: auto;
+}
+
+.slides1 .img4 {
+    width: 115px;
+    height: auto;
+}
+
+.imgPaleta{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 490px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.beleza{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: auto;
+}
+
+p {
+    margin-top: 7px;
+}
+
+span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer {
+    float: right;     
+    width: 60%;  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.button {
+    background-color: brown;
+    color: antiquewhite;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 999px;
+    position: fixed;
+    left: 670px;
+}
+
+.dot-box {
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+    left: 115px;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 2px;
+    background-color: chartreuse;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color .6s ease;
+}
+
+.active, .dot :hover {
+    background-color: red;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
+}
+
+
+
+
+
+
+
+

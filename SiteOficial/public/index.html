@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TelaCadastro</title>
+    <link rel="stylesheet" href="./css/StyleCadastro.css">
+</head>
+<body>
+
+    <header id="header">
+        <div id="container">
+    
+            <div class="flex">
+        
+        <div class="box-login">
+
+            <div class="box-img">
+
+                    <div class="texto-login">
+                        <center>
+                        <h1>Bem-Vindo</h1>
+                        <h3>Insira seus dados para cadastro</h3>
+                        </center>
+                    </div>
+
+                <form>
+                    <label>Usuário</label>
+                    <input id="nome_usuario" type="text">
+
+                    <label>Email</label>
+                    <input id="email_usuario" type="text">
+
+                    <label>Senha</label>
+                    <input id="senha_usuario" type="password">
+
+                    <label>Cor Favorita</label>
+                    <input id="cor_favorita_usuario" type="text">
+
+                    <button type="button" onclick="cadastrar()">Cadastrar</button>
+                </form>
+            </div>
+
+        </div>
+
+    </header>
+
+    <section id="slider" class="banner">
+        
+        <img class="selected" src="./assets/Fundos/Roxo.png">
+        <img src="./assets/Fundos/Prédios.png">
+        <img src="./assets/Fundos/Mar.png">
+
+    </section>
+
+    <script src="./js/menu.js"></script>
+
+
+    <script src="./js/Script.js"></script>
+
+</body>
+</html>
+
+<script>
+    function cadastrar() {
+  
+      //Recupere o valor da nova input pelo nome do id
+      // Agora vá para o método fetch logo abaixo
+      var NomeUsuario = nome_usuario.value
+      var Email = email_usuario.value
+      var Senha = senha_usuario.value
+      var CorFavorita = cor_favorita_usuario.value
+      
+
+      if (NomeUsuario == '' || Email == ''|| CorFavorita == '' || Senha == '') {
+        alert =
+          "(Mensagem de erro para todos os campos em branco)";
+  
+        finalizarAguardar();
+        return false;
+      } else {
+        setInterval(sumirMensagem, 5000);
+      }
+  
+      // Enviando o valor da nova input
+      fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          nomeServer: NomeUsuario,
+          emailServer: Email,
+          senhaServer: Senha,
+          corServer: CorFavorita
+        }),
+      })
+        .then(function (resposta) {
+          console.log("resposta: ", resposta);
+  
+          if (resposta.ok) {
+  
+            alert =
+              "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+  
+            setTimeout(() => {
+              window.location = "TelaLogin.html";
+            }, "2000");
+  
+            limparFormulario();
+            
+          } else {
+            throw "Houve um erro ao tentar realizar o cadastro!";
+          }
+        })
+        .catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+        });
+  
+      return false;
+    }
+  
+    function listar() {
+      fetch("/empresas/listar", {
+        method: "GET",
+      })
+        .then(function (resposta) {
+          resposta.json().then((empresas) => {
+            empresas.forEach((empresa) => {
+              listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
+            });
+          });
+        })
+        .catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+        });
+    }
+  
+    function sumirMensagem() {
+
+    }
+  </script>
