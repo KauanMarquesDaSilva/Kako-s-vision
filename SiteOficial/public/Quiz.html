@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <link rel="stylesheet" href="./css/StyleQuiz.css">
+    <link id="icone" rel="icon" href="./assets/Logotipo.png">
 </head>
+
 <body>
 
     <header id="header">
-        
+
         <div id="container">
-    
+
             <div class="flex">
-    
-            <nav>
-                <ul>
-                    <li><a href="TelaPrincipal.html">Home</a></li>
-                    <li><a href="Personagens.html">Personagens</a></li>
-                    <li><a href="Quiz.html">Quiz</a></li>
-                    <li><a href="Contribuir.html">Contribuir</a></li>
-                    <li><a href="Estatisticas.html">Estatísticas</a></li>
-                    <li><a href="SaibaMais.html">Saiba Mais</a></li>
-                </ul>
-            </nav>
 
-        </div>
+                <nav>
+                    <ul>
+                        <li><a href="TelaPrincipal.html">Home</a></li>
+                        <li><a href="Personagens.html">Personagens</a></li>
+                        <li><a href="Quiz.html">Quiz</a></li>
+                        <li><a href="Contribuir.html">Contribuir</a></li>
+                        <li><a href="Estatisticas.html">Estatísticas</a></li>
+                        <li><a href="SaibaMais.html">Saiba Mais</a></li>
+                    </ul>
+                </nav>
 
-
-        <main>
-
-            <div class="container1" id="fundo">
-                
-                <div id="question" class="pergunta"></div>
-                <div id="options" class="opcoes"></div>
-                <div id="result" class="result hidden">
-                    <p id="resultado-texto"></p>
-                    <br>
-                </div>
-                <button id="menuButton" class="voltar">Voltar</button>
             </div>
 
-            <div class="container2">
+
+            <main>
+
+                <div class="container1" id="fundo">
+
+                    <div id="question" class="pergunta"></div>
+                    <div id="options" class="opcoes"></div>
+                    <div id="result" class="result hidden">
+                        <p id="resultado-texto"></p>
+                        <br>
+                    </div>
+                </div>
+
+                <div class="container2">
                     <div id="teste1" class="slides slides1 fades">
                         <img style="width: 230px;" src="./assets/Luau/Pin Especial.png">
                         <h2 class="title">Luau</h2>
                         <p class="content"><a href="Luau.html">Descrição</a></p>
+                        <button id="button_publicar1" class="buttonLuau" onclick="Luau()">Salvar Resultado</button>
                     </div>
                 </div>
 
@@ -53,53 +56,59 @@
                     <div id="teste2" class="slides slides2 fades">
                         <img style="width: 200px;" src="./assets/Fieal/Especial.png">
                         <h2 class="title">Fieal</h2>
-                        
                         <p class="content"><a href="Fieal.html">Descrição</a></p>
+                        <button id="button_publicar2" class="buttonFieal" onclick="Fieal()">Salvar Resultado</button>
                     </div>
                 </div>
 
                 <div>
-                <div>
-                    <div id="teste3" class="slides slides3 fades">
-                        <img style="width: 200px;" src="./assets/Vinicius/Especial.png">
-                        <h2 class="title">Vinicius</h2>
-                        <p class="content"><a href="Vinicius.html">Descrição</a></p>
+                    <div>
+                        <div id="teste3" class="slides slides3 fades">
+                            <img style="width: 200px;" src="./assets/Vinicius/Especial.png">
+                            <h2 class="title">Vinicius</h2>
+                            <p class="content"><a href="Vinicius.html">Descrição</a></p>
+                            <button id="button_publicar3" class="buttonVinicius" onclick="Vinicius()">Salvar Resultado</button>
+                        </div>
                     </div>
+
+                    <div>
+                        <div id="teste4" class="slides slides4 fades">
+                            <img style="width: 200px;" src="./assets/Deivi/Especial.png">
+                            <h2 class="title">Deivi</h2>
+                            <p class="content"><a href="Deivi.html">Descrição</a></p>
+                            <button id="button_publicar4" class="buttonDeivi" onclick="Deivi()">Salvar Resultado</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div id="teste5" class="slides slides5 fades">
+                            <img style="width: 200px;" src="./assets/Sajad/Especial.png">
+                            <h2 class="title">Sajad</h2>
+                            <p class="content"><a href="Sajad.html">Descrição</a></p>
+                            <button id="button_publicar5" class="buttonSajad" onclick="Sajad()">Salvar Resultado</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div id="teste6" class="slides slides6 fades">
+                            <img style="width: 230px;" src="./assets/Oliver/Especial.png">
+                            <h2 class="title">Oliver</h2>
+                            <p class="content"><a class="Oliver" href="Oliver.html">Descrição</a></p>
+                            <button id="button_publicar6" class="buttonOliver" onclick="Oliver()">Salvar Resultado</button>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div>
-                    <div id="teste4" class="slides slides4 fades">
-                        <img style="width: 200px;" src="./assets/Deivi/Especial.png">
-                        <h2 class="title">Deivi</h2>
-                        <p class="content"><a href="Deivi.html">Descrição</a></p>
-                    </div>
-                </div>
+                
 
-                <div>
-                    <div id="teste5" class="slides slides5 fades">
-                        <img style="width: 200px;"  src="./assets/Sajad/Especial.png">
-                        <h2 class="title">Sajad</h2>
-                        <p class="content"><a href="Sajad.html">Descrição</a></p>
-                    </div>
-                </div>
-
-                <div>
-                    <div id="teste6" class="slides slides6 fades">
-                        <img style="width: 230px;" src="./assets/Oliver/Especial.png">
-                        <h2 class="title">Oliver</h2>
-                        <p class="content"><a class="Oliver" href="Oliver.html">Descrição</a></p>
-                    </div>
-                </div>
-            </div>
-        
-
-        </main>
+            </main>
 
 
     </header>
 
     <section id="slider" class="banner">
-        
+
         <img class="selected" src="./assets/Fundos/Roxo.png">
         <img src="./assets/Fundos/Prédios.png">
         <img src="./assets/Fundos/Mar.png">
@@ -113,4 +122,123 @@
     <script src="js/Script.js"></script>
 
 </body>
+
 </html>
+
+<script>
+
+    let PersonagemVencedor = JSON.parse(localStorage.getItem('winningPersonagem'));
+
+    const idDoVencedor = get(PersonagemVencedor);
+    const elementoVencedor = document.getElementById(idDoVencedor);
+
+    localStorage.setItem('PersonagemVencedor', JSON.stringify(PersonagemVencedor));
+
+    var idUsuario = sessionStorage.ID_USUARIO
+
+    function Luau() {
+
+        console.log(idUsuario)
+        
+        var personagemVencedor = idDoVencedor;
+        var corpo = {
+            fkQuiz: 1,
+            IdUsuario: idUsuario
+        }
+
+        fetch(`/personagem/Luau`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        })
+    }
+
+    function Fieal() {
+        var personagemVencedor = idDoVencedor;
+
+        var corpo = {
+            fkQuiz: 2,
+            IdUsuario: idUsuario
+        }
+
+        fetch(`/personagem/Fieal`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        })
+    }
+
+    function Vinicius() {
+        var personagemVencedor = idDoVencedor;
+
+        var corpo = {
+            fkQuiz: 3,
+            IdUsuario: idUsuario
+        }
+
+        fetch(`/personagem/Vinicius`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        })
+    }
+
+    function Deivi() {
+        var personagemVencedor = idDoVencedor;
+
+        var corpo = {
+            fkQuiz: 4,
+            IdUsuario: idUsuario
+        }
+
+        fetch(`/personagem/Deivi`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        })
+    }
+
+    function Sajad() {
+        var personagemVencedor = idDoVencedor;
+
+        var corpo = {
+            fkQuiz: 5,
+            IdUsuario: idUsuarios
+        }
+
+        fetch(`/personagem/Sajad`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        })
+    }
+
+    function Oliver() {
+        var personagemVencedor = idDoVencedor;
+
+        var corpo = {
+            fkQuiz: 6,
+            IdUsuario: idUsuario
+        }
+
+        fetch(`/personagem/Oliver`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        })
+    }
+
+
+</script>

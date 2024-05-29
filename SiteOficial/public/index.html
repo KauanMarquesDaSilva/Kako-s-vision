@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TelaCadastro</title>
     <link rel="stylesheet" href="./css/StyleCadastro.css">
+    <link id="icone" rel="icon" href="./assets/Logotipo.png">
 </head>
 <body>
 
@@ -63,9 +64,7 @@
 
 <script>
     function cadastrar() {
-  
-      //Recupere o valor da nova input pelo nome do id
-      // Agora vá para o método fetch logo abaixo
+
       var NomeUsuario = nome_usuario.value
       var Email = email_usuario.value
       var Senha = senha_usuario.value
@@ -73,10 +72,9 @@
       
 
       if (NomeUsuario == '' || Email == ''|| CorFavorita == '' || Senha == '') {
-        alert =
-          "(Mensagem de erro para todos os campos em branco)";
-  
-        finalizarAguardar();
+        
+        alert `Preencha todos os campos`
+
         return false;
       } else {
         setInterval(sumirMensagem, 5000);

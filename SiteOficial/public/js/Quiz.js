@@ -1,224 +1,241 @@
 const questions = [
 
-    { question: "No seu tempo livre, o que você faria?",
+  {
+    question: "No seu tempo livre, o que você faria?",
     options: ["Encontraria os amigos",
-    "Ficaria em casa lendo",
-    "Comer", 
-    "Deitaria num jardir só meu",
-    "Iria passear",
-    "Ficaria com a Família"], 
-    points: [1, 2, 3, 4, 5, 6] },
+      "Ficaria em casa lendo",
+      "Comer",
+      "Deitaria num jardir só meu",
+      "Iria passear",
+      "Ficaria com a Família"],
+    points: [1, 2, 3, 4, 5, 6]
+  },
 
 
 
-    { question: "O que você não suporta?",
+  {
+    question: "O que você não suporta?",
     options: ["Injustiça",
-    "Gente Lerda",
-    "Pessoas",
-    "Nada, Sou Tranquilo",
-    "Ser superado naquilo que sou bom",
-    "Que Provoque Quem Amo"],
-    points: [1, 2, 3, 4, 5, 6] },
+      "Gente Lerda",
+      "Pessoas",
+      "Nada, Sou Tranquilo",
+      "Ser superado naquilo que sou bom",
+      "Que Provoque Quem Amo"],
+    points: [1, 2, 3, 4, 5, 6]
+  },
 
 
 
-    { question: "Você se considera uma pessoa:",
+  {
+    question: "Você se considera uma pessoa:",
     options: ["Diferente",
-    "Inteligente",
-    "Impaciente",
-    "Feliz",
-    "Determinada",
-    "Forte"],
-    points: [1, 2, 3, 4, 5, 6] },
+      "Inteligente",
+      "Impaciente",
+      "Feliz",
+      "Determinada",
+      "Forte"],
+    points: [1, 2, 3, 4, 5, 6]
+  },
 
 
 
-    { question: "Das opções abaixo, qual você mais gosta de fazer?",
+  {
+    question: "Das opções abaixo, qual você mais gosta de fazer?",
     options: ["Treinar",
-    "Aprender Algo Novo",
-    "Ouvir Música",
-    "Conversar",
-    "Conhecer Lugares Novos",
-    "Desenhar"],
-    points: [1, 2, 3, 4, 5, 6] },
+      "Aprender Algo Novo",
+      "Ouvir Música",
+      "Conversar",
+      "Conhecer Lugares Novos",
+      "Desenhar"],
+    points: [1, 2, 3, 4, 5, 6]
+  },
 
 
 
-    { question: "Pra você, o que é mais difícil?",
+  {
+    question: "Pra você, o que é mais difícil?",
     options: ["Amar o Próximo",
-    "Reconhecer Seus Erros",
-    "Se Expressar",
-    "Saber Que Poderia Ter Feito Algo Diferente",
-    "Superar Seus Traumas",
-    "Se Conhecer"],
-    points: [1, 2, 3, 4, 5, 6] },
+      "Reconhecer Seus Erros",
+      "Se Expressar",
+      "Saber Que Poderia Ter Feito Algo Diferente",
+      "Superar Seus Traumas",
+      "Se Conhecer"],
+    points: [1, 2, 3, 4, 5, 6]
+  },
 
 
 
-    { question: "Qual dessas vista você prefere?",
+  {
+    question: "Qual dessas vista você prefere?",
     options: ["Céu Estrelado",
-    "Montanhas",
-    "Pôr Do Sol",
-    "Floresta",
-    "Mar Tempestuoso",
-    "Universo"],
-    points: [1, 2, 3, 4, 5, 6] },
+      "Montanhas",
+      "Pôr Do Sol",
+      "Floresta",
+      "Mar Tempestuoso",
+      "Universo"],
+    points: [1, 2, 3, 4, 5, 6]
+  },
 
 
 
-    { question: "Se você pudesse mudar algo a sua vontade, o que seria?",
+  {
+    question: "Se você pudesse mudar algo a sua vontade, o que seria?",
     options: ["O Passado",
-    "O Futuro",
-    "A Si Mesmo",
-    "Nada",
-    "Os Outros",
-    "Tudo"],
-    points: [1, 2, 3, 4, 5, 6] },
+      "O Futuro",
+      "A Si Mesmo",
+      "Nada",
+      "Os Outros",
+      "Tudo"],
+    points: [1, 2, 3, 4, 5, 6]
+  },
 
-  ];
+];
 
-  
 
-  const Personagens = ["Luau", "Fieal", "Vinicius", "Deivi", "Sajad", "Oliver"];
 
-  
+const Personagens = ["Luau", "Fieal", "Vinicius", "Deivi", "Sajad", "Oliver"];
 
-  let currentQuestion = 0;
 
-  let answers = { "Luau": 0, "Fieal": 0, "Vinicius": 0, "Deivi": 0, "Sajad": 0, "Oliver": 0 };
 
-  
+let currentQuestion = 0;
 
-  const questionElement = document.getElementById("question");
+let answers = { "Luau": 0, "Fieal": 0, "Vinicius": 0, "Deivi": 0, "Sajad": 0, "Oliver": 0 };
 
-  const optionsElement = document.getElementById("options");
 
-  const resultElement = document.getElementById("result");
 
-  const voltarButton = document.querySelector(".voltar");
+const questionElement = document.getElementById("question");
 
-  const testeElement = document.getElementById("teste");
+const optionsElement = document.getElementById("options");
 
-  const fundoElement = document.getElementById("fundo");
+const resultElement = document.getElementById("result");
 
-  
+const publicarButton1 = document.getElementById("button_publicar1");
+const publicarButton2 = document.getElementById("button_publicar2");
+const publicarButton3 = document.getElementById("button_publicar3");
+const publicarButton4 = document.getElementById("button_publicar4");
+const publicarButton5 = document.getElementById("button_publicar5");
+const publicarButton6 = document.getElementById("button_publicar6");
 
-  function showQuestion() {
+const testeElement = document.getElementById("teste");
 
-    const question = questions[currentQuestion];
+const fundoElement = document.getElementById("fundo");
 
-    questionElement.textContent = question.question;
 
-    
 
-    optionsElement.innerHTML = '';
+function showQuestion() {
 
-    question.options.forEach((option, index) => {
+  const question = questions[currentQuestion];
 
-      const button = document.createElement("button");
+  questionElement.textContent = question.question;
 
-      button.textContent = option;
 
-      button.addEventListener("click", () => selectOption(option, question.points[index]));
 
-      optionsElement.appendChild(button);
+  optionsElement.innerHTML = '';
 
-    });
+  question.options.forEach((option, index) => {
+
+    const button = document.createElement("button");
+
+    button.textContent = option;
+
+    button.addEventListener("click", () => selectOption(option, question.points[index]));
+
+    optionsElement.appendChild(button);
+
+  });
+
+}
+
+
+
+function selectOption(option, points) {
+
+  const question = questions[currentQuestion];
+
+  const PersonagensIndex = question.options.indexOf(option);
+
+  const Personagem = Personagens[PersonagensIndex];
+
+
+
+  answers[Personagem] += 1;
+
+  currentQuestion++;
+
+  if (currentQuestion < questions.length) {
+
+    showQuestion();
+
+  } else {
+
+    showResult();
 
   }
 
-  
+}
 
-  function selectOption(option, points) {
 
-    const question = questions[currentQuestion];
+function showResult() {
 
-    const PersonagensIndex = question.options.indexOf(option);
+  let maxPoints = -1;
 
-    const Personagem = Personagens[PersonagensIndex];
+  let winningPersonagem = "";
 
-    
 
-    answers[Personagem] += 1;
 
-    currentQuestion++;
+  for (const Personagem in answers) {
 
-    if (currentQuestion < questions.length) {
+    if (answers[Personagem] > maxPoints) {
 
-      showQuestion();
+      maxPoints = answers[Personagem];
 
-    } else {
-
-      showResult();
+      winningPersonagem = Personagem;
 
     }
 
   }
-  
 
-  function showResult() {
+  const testes = document.querySelectorAll("[id^='teste']");
+  testes.forEach(teste => teste.style.display = "none");
 
-    let maxPoints = -1;
+  const idDoVencedor = get(winningPersonagem);
+  const elementoVencedor = document.getElementById(idDoVencedor);
 
-    let winningPersonagem = "";
+  elementoVencedor.style.display = "flex";
+  publicarButton1.style.display = "flex";
+  publicarButton2.style.display = "flex";
+  publicarButton3.style.display = "flex";
+  publicarButton4.style.display = "flex";
+  publicarButton5.style.display = "flex";
+  publicarButton6.style.display = "flex";
 
-  
+  fundoElement.style.display = "none";
+  questionElement.style.display = "none";
 
-    for (const Personagem in answers) {
+  localStorage.setItem('winningPersonagem', JSON.stringify(winningPersonagem));
 
-      if (answers[Personagem] > maxPoints) {
-
-        maxPoints = answers[Personagem];
-
-        winningPersonagem = Personagem;
-
-      }
-
-    }
-    
-    const testes = document.querySelectorAll("[id^='teste']");
-    testes.forEach(teste => teste.style.display = "none");
-
-    const idDoVencedor = get(winningPersonagem);
-    const elementoVencedor = document.getElementById(idDoVencedor);
-    elementoVencedor.style.display = "flex";
-
-    const mensagemFinal = `Quem te Representa é: ${winningPersonagem}!`;
-    resultElement.textContent = mensagemFinal;
-    fundoElement.style.display = "none";
-    questionElement.style.display = "none";
-    optionsElement.style.display = "none";
-    voltarButton.style.display = "block";
-
-    localStorage.setItem('winningPersonagem', JSON.stringify(winningPersonagem));
 }
 
 function get(Personagem) {
-    const idPersonagem = {
-      "Luau": "teste1",
-      "Fieal": "teste2",
-      "Vinicius": "teste3",
-      "Deivi": "teste4",
-      "Sajad": "teste5",
-      "Oliver": "teste6"
-    };
+  const idPersonagem = {
+    "Luau": "teste1",
+    "Fieal": "teste2",
+    "Vinicius": "teste3",
+    "Deivi": "teste4",
+    "Sajad": "teste5",
+    "Oliver": "teste6"
+  };
 
-    return idPersonagem[Personagem];
+  return idPersonagem[Personagem];
 }
-  
-
-  showQuestion();
 
 
-  
-  const menuButton = document.getElementById("menuButton");
+showQuestion();
 
-    menuButton.addEventListener("click", showMenu);
+function showMenu() {
+  window.location.href = "Quiz.html"
 
-    function showMenu() {
-        window.location.href = "Quiz.html"
-
-        const menuButton = document.getElementById("showMenu");
-        menuButton.style.display = "block";
-    }
+  const menuButton = document.getElementById("showMenu");
+  menuButton.style.display = "block";
+}
 
