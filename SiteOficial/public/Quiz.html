@@ -67,7 +67,8 @@
                             <img style="width: 200px;" src="./assets/Vinicius/Especial.png">
                             <h2 class="title">Vinicius</h2>
                             <p class="content"><a href="Vinicius.html">Descrição</a></p>
-                            <button id="button_publicar3" class="buttonVinicius" onclick="Vinicius()">Salvar Resultado</button>
+                            <button id="button_publicar3" class="buttonVinicius" onclick="Vinicius()">Salvar
+                                Resultado</button>
                         </div>
                     </div>
 
@@ -76,7 +77,8 @@
                             <img style="width: 200px;" src="./assets/Deivi/Especial.png">
                             <h2 class="title">Deivi</h2>
                             <p class="content"><a href="Deivi.html">Descrição</a></p>
-                            <button id="button_publicar4" class="buttonDeivi" onclick="Deivi()">Salvar Resultado</button>
+                            <button id="button_publicar4" class="buttonDeivi" onclick="Deivi()">Salvar
+                                Resultado</button>
                         </div>
                     </div>
 
@@ -85,7 +87,8 @@
                             <img style="width: 200px;" src="./assets/Sajad/Especial.png">
                             <h2 class="title">Sajad</h2>
                             <p class="content"><a href="Sajad.html">Descrição</a></p>
-                            <button id="button_publicar5" class="buttonSajad" onclick="Sajad()">Salvar Resultado</button>
+                            <button id="button_publicar5" class="buttonSajad" onclick="Sajad()">Salvar
+                                Resultado</button>
                         </div>
                     </div>
 
@@ -94,13 +97,14 @@
                             <img style="width: 230px;" src="./assets/Oliver/Especial.png">
                             <h2 class="title">Oliver</h2>
                             <p class="content"><a class="Oliver" href="Oliver.html">Descrição</a></p>
-                            <button id="button_publicar6" class="buttonOliver" onclick="Oliver()">Salvar Resultado</button>
+                            <button id="button_publicar6" class="buttonOliver" onclick="Oliver()">Salvar
+                                Resultado</button>
                         </div>
                     </div>
 
                 </div>
 
-                
+
 
             </main>
 
@@ -139,11 +143,10 @@
     function Luau() {
 
         console.log(idUsuario)
-        
-        var personagemVencedor = idDoVencedor;
+
         var corpo = {
             fkQuiz: 1,
-            IdUsuario: idUsuario
+            idUsuario: idUsuario
         }
 
         fetch(`/personagem/Luau`, {
@@ -156,11 +159,12 @@
     }
 
     function Fieal() {
-        var personagemVencedor = idDoVencedor;
+
+        console.log(idUsuario)
 
         var corpo = {
             fkQuiz: 2,
-            IdUsuario: idUsuario
+            idUsuario: idUsuario
         }
 
         fetch(`/personagem/Fieal`, {
@@ -173,11 +177,12 @@
     }
 
     function Vinicius() {
-        var personagemVencedor = idDoVencedor;
+
+        console.log(idUsuario)
 
         var corpo = {
             fkQuiz: 3,
-            IdUsuario: idUsuario
+            idUsuario: idUsuario
         }
 
         fetch(`/personagem/Vinicius`, {
@@ -190,11 +195,12 @@
     }
 
     function Deivi() {
-        var personagemVencedor = idDoVencedor;
+
+        console.log(idUsuario)
 
         var corpo = {
             fkQuiz: 4,
-            IdUsuario: idUsuario
+            idUsuario: idUsuario
         }
 
         fetch(`/personagem/Deivi`, {
@@ -207,11 +213,12 @@
     }
 
     function Sajad() {
-        var personagemVencedor = idDoVencedor;
+
+        console.log(idUsuario)
 
         var corpo = {
             fkQuiz: 5,
-            IdUsuario: idUsuarios
+            idUsuario: idUsuario
         }
 
         fetch(`/personagem/Sajad`, {
@@ -224,11 +231,12 @@
     }
 
     function Oliver() {
-        var personagemVencedor = idDoVencedor;
+
+        console.log(idUsuario)
 
         var corpo = {
             fkQuiz: 6,
-            IdUsuario: idUsuario
+            idUsuario: idUsuario
         }
 
         fetch(`/personagem/Oliver`, {

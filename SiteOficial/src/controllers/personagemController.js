@@ -3,7 +3,7 @@ var personagemModel = require("../models/personagemModel");
 function Luau(req, res) {
     
     var fkQuiz = req.body.fkQuiz;
-    var idUsuario = req.body.IdUsuario;
+    var idUsuario = req.body.idUsuario;
 
     if (fkQuiz == undefined) {
         res.status(400).send("O nome do personagem está indefinido!");
@@ -29,7 +29,7 @@ function Luau(req, res) {
 function Fieal(req, res) {
     
     var fkQuiz = req.body.fkQuiz;
-    var idUsuario = req.body.IdUsuario;
+    var idUsuario = req.body.idUsuario;
 
     if (fkQuiz == undefined) {
         res.status(400).send("O nome do personagem está indefinido!");
@@ -55,7 +55,7 @@ function Fieal(req, res) {
 function Vinicius(req, res) {
     
     var fkQuiz = req.body.fkQuiz;
-    var idUsuario = req.body.IdUsuario;
+    var idUsuario = req.body.idUsuario;
 
     if (fkQuiz == undefined) {
         res.status(400).send("O nome do personagem está indefinido!");
@@ -81,7 +81,7 @@ function Vinicius(req, res) {
 function Deivi(req, res) {
     
     var fkQuiz = req.body.fkQuiz;
-    var idUsuario = req.body.IdUsuario;
+    var idUsuario = req.body.idUsuario;
 
     if (fkQuiz == undefined) {
         res.status(400).send("O nome do personagem está indefinido!");
@@ -107,7 +107,7 @@ function Deivi(req, res) {
 function Sajad(req, res) {
     
     var fkQuiz = req.body.fkQuiz;
-    var idUsuario = req.body.IdUsuario;
+    var idUsuario = req.body.idUsuario;
 
     if (fkQuiz == undefined) {
         res.status(400).send("O nome do personagem está indefinido!");
@@ -133,7 +133,7 @@ function Sajad(req, res) {
 function Oliver(req, res) {
     
     var fkQuiz = req.body.fkQuiz;
-    var idUsuario = req.body.IdUsuario;
+    var idUsuario = req.body.idUsuario;
 
     if (fkQuiz == undefined) {
         res.status(400).send("O nome do personagem está indefinido!");

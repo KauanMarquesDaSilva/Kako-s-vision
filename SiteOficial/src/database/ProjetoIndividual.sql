@@ -36,7 +36,7 @@ CREATE TABLE Contribuicao (
     NomeCor VARCHAR(45),
     Hexadecimal VARCHAR(45),
     Data DATETIME,
-    QtdContribucao VARCHAR(45),
+    QtdContribucao INT,
     fkUsuario INT,
 		CONSTRAINT fkContribuicaoUsuario FOREIGN KEY (fkUsuario)
 			REFERENCES Usuario(idUsuario));
@@ -44,3 +44,4 @@ CREATE TABLE Contribuicao (
 SELECT * FROM Usuario;
 SELECT * FROM Quiz;
 SELECT * FROM Resultado;
+SELECT * FROM Contribuicao;

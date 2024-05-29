@@ -90,7 +90,7 @@
 
     } else {
         container1.style.backgroundColor = '#' + Hexadecimal;
-        mini_container.style.backgroundColor = '#' + Hexadecimal;
+
     }
 }
 
@@ -102,6 +102,7 @@
 
     let Hexadecimal = hexadecimal.value;
     let NomeCor = nome_cor.value;
+    let QuantidadeContribuicao = 0
 
 
     if(Hexadecimal == "" || NomeCor == ""){
@@ -112,6 +113,29 @@
 
         localStorage.setItem('Hexadecimal', Hexadecimal)
         localStorage.setItem('NomeCor', NomeCor)
+
+        QuantidadeContribuicao = QuantidadeContribuicao + 1
+
+        localStorage.setItem('QuantidadeContribuicao', QuantidadeContribuicao)
+
+        var idUsuario = sessionStorage.ID_USUARIO
+        
+        var corpo = {
+            fkUsuario: idUsuario,
+            NomeCor: hexadecimal.value,
+            Hexadecimal: nome_cor.value,
+            qtdContribuicao: QuantidadeContribuicao,
+        }
+
+        fetch(`/contribuicao/cores`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        })
+
+        console.log(corpo)
     }
 }
 
