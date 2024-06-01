@@ -82,7 +82,27 @@ function cadastrar(req, res) {
     }
 }
 
+function obterDados(req, res){
+
+    usuarioModel.obterDados()
+        .then(function(resultado){
+            
+            if(resultado.length > 0){
+                res.json(resultado);
+            }else{
+                req.status(404).send("Nenhum resultado salvo");
+            }
+        })
+
+        .catch(function(erro){
+            console.error("Erro ao obter o resultado", erro);
+            res.status(500).json({error: "Erro interno do servidor"});
+        });
+
+}
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    obterDados
 }

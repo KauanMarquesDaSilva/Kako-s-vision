@@ -7,9 +7,10 @@
     <title>Estatísticas</title>
     <link rel="stylesheet" href="./css/Estatisticas.css">
     <link id="icone" rel="icon" href="./assets/Logotipo.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body>
+<body onload="obterDados()">
 
     <header id="header">
 
@@ -33,78 +34,91 @@
 
             <main>
                 <section class="container1">
-                    <h1>Estatísticas</h1>
 
-                    <div class="contribuicao">
-                        <h2>Última Contribuição</h2>
-                        <ul>
+                    <div class="box1">
 
-                        </ul>
-                    </div>
+                        <h1>Estatísticas</h1>
 
-                    <p></p>
+                        <div class="contribuicao">
+                            <h2>Última Contribuição</h2>
+                            <ul>
 
-                    <div class="ResultadoQuiz">
-                        <h2>Resultado do Quiz</h2>
-                        <div id="teste1" class="slides slides1 fades">
-                            <img style="width: 230px;" src="./assets/Luau/Pin Especial.png">
-                            <p></p>
-                            <h1 class="title">Luau</h1>
+                            </ul>
                         </div>
-                    </div>
 
-                    <div>
-                        <div id="teste2" class="slides slides2 fades">
-                            <img style="width: 200px;" src="./assets/Fieal/Especial.png">
-                            <p></p>
-                            <h1 class="title">Fieal</h1>
+                        <p></p>
 
-
-                        </div>
-                    </div>
-
-                    <div>
-                        <div>
-                            <div id="teste3" class="slides slides3 fades">
-                                <img style="width: 200px;" src="./assets/Vinicius/Especial.png">
+                        <div class="ResultadoQuiz">
+                            <h2>Resultado do Quiz</h2>
+                            <div id="teste1" class="slides slides1 fades">
+                                <img style="width: 230px;" src="./assets/Luau/Pin Especial.png">
                                 <p></p>
-                                <h1 class="title">Vinicius</h1>
+                                <h1 class="title">Luau</h1>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div id="teste2" class="slides slides2 fades">
+                                <img style="width: 200px;" src="./assets/Fieal/Especial.png">
+                                <p></p>
+                                <h1 class="title">Fieal</h1>
+
 
                             </div>
                         </div>
 
                         <div>
-                            <div id="teste4" class="slides slides4 fades">
-                                <img style="width: 200px;" src="./assets/Deivi/Especial.png">
-                                <p></p>
-                                <h1 class="title">Deivi</h1>
+                            <div>
+                                <div id="teste3" class="slides slides3 fades">
+                                    <img style="width: 200px;" src="./assets/Vinicius/Especial.png">
+                                    <p></p>
+                                    <h1 class="title">Vinicius</h1>
 
+                                </div>
                             </div>
+
+                            <div>
+                                <div id="teste4" class="slides slides4 fades">
+                                    <img style="width: 200px;" src="./assets/Deivi/Especial.png">
+                                    <p></p>
+                                    <h1 class="title">Deivi</h1>
+
+                                </div>
+                            </div>
+
+                            <div>
+                                <div id="teste5" class="slides slides5 fades">
+                                    <img style="width: 200px;" src="./assets/Sajad/Especial.png">
+                                    <p></p>
+                                    <h1 class="title">Sajad</h1>
+
+                                </div>
+                            </div>
+
+                            <div>
+                                <div id="teste6" class="slides slides6 fades">
+                                    <img style="width: 230px;" src="./assets/Oliver/Especial.png">
+                                    <p></p>
+                                    <h1 class="title">Oliver</h1>
+
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div>
-                            <div id="teste5" class="slides slides5 fades">
-                                <img style="width: 200px;" src="./assets/Sajad/Especial.png">
-                                <p></p>
-                                <h1 class="title">Sajad</h1>
-
-                            </div>
-                        </div>
-
-                        <div>
-                            <div id="teste6" class="slides slides6 fades">
-                                <img style="width: 230px;" src="./assets/Oliver/Especial.png">
-                                <p></p>
-                                <h1 class="title">Oliver</h1>
-
-                            </div>
-                        </div>
                     </div>
+
+                    <div class="grafico">
+                        <canvas id="myChart"></canvas>
+                    </div>
+
+                </section>
+
+
+
         </div>
 
-        
 
-        </section>
 
 
         </main>
@@ -128,6 +142,36 @@
 
     <script src="js/Quiz.js"></script>
 
+    <script>
+        const labels = []
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Quantidade de vezes que cada personagem foi tirado',
+                data: [],
+                borderWidth: 1
+            }]
+        };
+
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        var myChart = new Chart(
+            document.getElementById('myChart'),
+            config,
+            data
+        );
+    </script>
+
 </body>
 
 </html>
@@ -147,5 +191,41 @@
     fundoElement.style.display = "none";
 
     localStorage.setItem('PersonagemVencedor', JSON.stringify(PersonagemVencedor));
+
+
+    // Parte do Gráfcio da Dashboard ---------------------------------------------------------------------------------------
+
+    
+
+    function obterDados() {
+        fetch(`/usuarios/obterDados`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            .then(function (resposta) {
+                if (!resposta.ok) {
+                    throw new Error("Erro ao obter dados");
+                }
+                return resposta.json();
+            })
+            .then(function (data) {
+                console.log("Dados recebidos do servidor:", data); // Adicionado para debug
+
+                const labels = data.map(item => item.NomePersonagem);
+                const dataset = data.map(item => item.Total);
+
+                myChart.data.labels = labels;
+                myChart.data.datasets[0].data = dataset;
+
+                myChart.update();
+            })
+            .catch(function (erro) {
+                console.error("Erro ao obter Dados: ", erro);
+            });
+    }
+
+
 
 </script>
